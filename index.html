@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TestMate AI – Smart QA Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🧠 TestMate AI</h1>
+    <p>Your Smart Assistant for QA Insights</p>
+  </header>
+
+  <section class="input-area">
+    <h2>📝 Paste Test Steps / Logs</h2>
+    <textarea id="inputText" placeholder="Paste logs, test steps, or issue summary here..."></textarea>
+    <button onclick="generateAIInsight()">Generate AI Insights</button>
+  </section>
+
+  <section class="output-area" id="outputSection">
+    <h2>🧾 AI Insights</h2>
+    <div class="output-block" id="bugSummary">
+      <h3>🐞 Bug Summary</h3>
+      <p>...</p>
+    </div>
+    <div class="output-block" id="fixSuggestion">
+      <h3>🛠 Suggested Fix</h3>
+      <p>...</p>
+    </div>
+    <div class="output-block" id="regressionScope">
+      <h3>🔁 Regression Scope</h3>
+      <p>...</p>
+    </div>
+    <div class="output-block" id="automationImpact">
+      <h3>🤖 Automation Insight</h3>
+      <p>...</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by Prathamesh Rokade | Powered by QA + AI Vision 🚀</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
