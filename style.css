@@ -20,10 +20,11 @@ textarea {
   font-size: 1rem;
   margin-top: 1rem;
   resize: vertical;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 button {
-  margin-top: 1rem;
   padding: 10px 20px;
   font-size: 1rem;
   background: #3949ab;
@@ -35,6 +36,13 @@ button {
 
 button:hover {
   background: #303f9f;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 section {
@@ -51,20 +59,6 @@ section {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #e8eaf6;
-  color: #555;
-  font-size: 0.9rem;
-}
-.button-group {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
 #copyBtn {
   margin-top: 20px;
   padding: 10px 20px;
@@ -78,4 +72,12 @@ footer {
 
 #copyBtn:hover {
   background: #1b5e20;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #e8eaf6;
+  color: #555;
+  font-size: 0.9rem;
 }

@@ -42,10 +42,14 @@ function generateAIInsight() {
 }
 
 function fillSample() {
-  const sample = `1. Navigate to checkout page
-2. Add item to cart
-3. Click “Pay Now” → observe error
-4. JS console shows TypeError: Cannot read property 'id' of undefined`;
+  const sample = `1. Launch the application and navigate to the checkout page
+2. Add one item to the cart and proceed
+3. Click on the "Pay Now" button
+4. Observe that no action occurs and console logs show:
+   TypeError: Cannot read property 'paymentId' of undefined
+5. This issue only occurs when user is not logged in
+6. No error toast message is displayed on the UI`;
+
   document.getElementById("inputText").value = sample;
 }
 
