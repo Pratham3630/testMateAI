@@ -42,6 +42,11 @@
     </div>
 
     <button id="copyBtn" onclick="copyInsights()">📋 Copy All Insights</button>
+	<div id="ai-output" style="margin-top: 20px; background: #f9f9f9; padding: 15px; border-radius: 8px; font-family: monospace; white-space: pre-wrap;">
+  <!-- AI Insights will appear here -->
+</div>
+<button onclick="copyToClipboard()" style="margin-top: 10px;">📋 Copy All Insights</button>
+
   </section>
 
   <footer>
@@ -50,5 +55,40 @@
 
   <!-- Link your JavaScript at the end -->
   <script src="script.js"></script>
+  <script>
+  function generateAIResponse() {
+    const inputText = document.getElementById('inputText').value;
+
+    // Mocked AI response
+    const mockAIOutput = `
+🐞 Bug Summary
+Unexpected timeout when fetching API data.
+
+🛠 Suggested Fix
+Add null checks and ensure object instantiation.
+
+🔁 Regression Scope
+Retest login, signup, and session handling.
+
+🤖 Automation Insight
+Update assertion logic in Playwright tests.
+    `;
+
+    // Show loading
+    document.getElementById('ai-output').innerHTML = '🔄 Generating AI Insights...';
+
+    // Simulate delay and show mock output
+    setTimeout(() => {
+      document.getElementById('ai-output').innerText = mockAIOutput;
+    }, 1500);
+  }
+
+  function copyToClipboard() {
+    const output = document.getElementById('ai-output').innerText;
+    navigator.clipboard.writeText(output);
+    alert("📋 Insights copied to clipboard!");
+  }
+</script>
+
 </body>
 </html>
