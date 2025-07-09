@@ -42,6 +42,8 @@
     </div>
 
     <button id="copyBtn" onclick="copyInsights()">📋 Copy All Insights</button>
+	<button onclick="resetFields()" style="margin-left: 10px;">🔄 Generate Again</button>
+
 	<div id="ai-output" style="margin-top: 20px; background: #f9f9f9; padding: 15px; border-radius: 8px; font-family: monospace; white-space: pre-wrap;">
   <!-- AI Insights will appear here -->
 </div>
@@ -86,6 +88,10 @@ Update assertion logic in Playwright tests.
     const output = document.getElementById('ai-output').innerText;
     navigator.clipboard.writeText(output);
     alert("📋 Insights copied to clipboard!");
+  }
+ function resetFields() {
+    document.getElementById("inputText").value = "";
+    document.getElementById("ai-output").innerHTML = "🧾 AI Insights will appear here...";
   }
 </script>
 
